@@ -52,7 +52,7 @@ class TabModal extends Component {
     }
 
     handleKeyPress = () => {
-        if(this.state.textAreas.length > 1) {
+        if(this.state.textAreas.length >= 1) {
             modalActions.update(this.current.value);
         }
     }
@@ -65,8 +65,8 @@ class TabModal extends Component {
                 leaveStyle={{ opacity: transit(0, 500, "ease-in-out") }}
                 activeStyle={{ opacity: 1.0 }}
                 active={this.state.visibility}>
-                    <div className="modal" onClick={this.handleClick}>
-                        <div className="modalContents" onClick={this.otherClick}>
+                    <div className="modal" onClick={this.handleClick}>  
+                        <div className={this.state.visibility ? "modalContentsActive" : "modalContents"} onClick={this.otherClick}>
                             <div className="tabBar">
                                 <button className="addBtn" onClick={this.addClick}>Add</button> 
                                 {this.state.textAreas.map((textArea, index) => {
