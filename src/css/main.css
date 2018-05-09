@@ -71,6 +71,8 @@
     text-align: center;
     font-family: system-ui, sans-serif;
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .selectedTab {
@@ -84,12 +86,15 @@
     text-align: center;
     font-family: system-ui, sans-serif;
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tabContent{
+    flex-grow: 1;
 }
 
 .remove {
-    top: 0%;
-    left: 95%;
-    position: absolute;
     margin: 0;
     padding: 0;
     cursor: pointer;
